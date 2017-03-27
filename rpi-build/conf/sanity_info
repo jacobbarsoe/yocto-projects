@@ -1,0 +1,4 @@
+SANITY_VERSION 1
+TMPDIR /home/jabk/projects/privat/yocto/rpi-build/tmp
+SSTATE_DIR /home/jabk/projects/privat/yocto/rpi-build/sstate-cache
+NATIVELSBSTRING Ubuntu-16.04
