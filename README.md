@@ -17,4 +17,10 @@ samestuff for older raspberry:
 
 . ./poky/oe-init-build-env rpi-build/
 MACHINE=raspberry bitbake rpi-image OR
-DISTRO=rpi-mender MACHINE=raspberrypi2 bitbake rpi-mender-image
+DISTRO=rpi-mender MACHINE=raspberrypi2 bitbake rpi-mender-image OR
+DISTRO=poky MACHINE=raspberrypi2 bitbake rpi-image OR
+DISTRO=poky MACHINE=orange-pi-zero bitbake rpi-image OR
+DISTRO=rpi-mender MACHINE=orange-pi-zero bitbake rpi-mender-image 
+
+SDimg from mender can be used to bootstrap
+sudo dd if=tmp-glibc/deploy/images/raspberrypi2/rpi-mender-image-raspberrypi2.sdimg of=/dev/mmcblk0 bs=2M
