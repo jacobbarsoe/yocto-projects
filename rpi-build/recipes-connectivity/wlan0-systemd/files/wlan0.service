@@ -1,0 +1,11 @@
+[Unit]
+Description=WPA supplicant daemon (interface-specific version)
+Before=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/sbin/wpa_supplicant -c/etc/wpa_supplicant/wlan0.conf -iwlan0 -Dwext
+
+[Install]
+WantedBy=multi-user.target.wants

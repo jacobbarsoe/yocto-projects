@@ -19,8 +19,10 @@ IMAGE_INSTALL_append = " kernel-image \
 	ppp \
 	bind-utils \
 	curl \
-	wpa-supplicant \
+	${@bb.utils.contains('DISTRO_FEATURES', 'systemd', ' wlan0-systemd', 'wpa-supplicant', d)} \
 	linux-firmware-rtl8188eu"
+
+
 
 IMAGE_FSTYPES = "ext4"
 SDIMG_ROOTFS_TYPE = "ext4"
