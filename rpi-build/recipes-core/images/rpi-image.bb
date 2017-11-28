@@ -5,6 +5,7 @@ include recipes-core/images/rpi-hwup-image.bb
 IMAGE_INSTALL_append = " \
 	hiawatha \
 	python-paho-mqtt \
+	python-pyserial \
 	python \
 	bind-utils "
 

@@ -1,0 +1,12 @@
+[Unit]                                                                          
+Description=Logger for Michael
+BindsTo=dev-ttyUSB0.device
+After=dev-ttyUSB0.device
+
+[Service]                                                                       
+ExecStart=/usr/bin/log.py /dev/ttyUSB0 
+Type=simple
+Restart=always                                                                  
+
+[Install]                                                                       
+WantedBy=multi-user.target 

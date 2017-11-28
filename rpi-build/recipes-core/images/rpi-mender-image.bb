@@ -10,6 +10,9 @@ IMAGE_BOOT_FILES_append = " bcm2835-bootfiles/* boot.scr u-boot.bin;${SDIMG_KERN
 IMAGE_INSTALL_append = " kernel-image \
 	kernel-devicetree \
 	hiawatha \
+	openssh-sshd \
+	python-pyserial \
+	loggerMichael \
 	python-paho-mqtt \
 	python \
 	rpi-gpio \
